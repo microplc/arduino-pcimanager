@@ -1,14 +1,14 @@
-# Introduction #
+# 介绍 #
 
-With PciManager Arduino library you can manage the Pin Change Interrupt of the microcontroller.
-You can register listeners in the PciManager for a change of a pin. The manager handles the interrupt and calls the listeners.
+使用 PciManager 库你能管理微控制器的引脚中断 Pin Change Interrupt 。
+你可以在 PciManager 中注册监听一个引脚的变化，管理器处理中断并召唤监听者。
 
-PciManager does not read the value of the pin, it just hides dirty hardware flags, but flexible enough to use multiply listeners on multiply pins.
+PciManager 并不读取引脚值，他只是隐藏了烦人的硬件标识，但足够处理多个引脚多个变化。
 
-__NOTE__: On some hardware the pin change interrupt is not implemented by interrupt vectors. As PciManager operates with interrupt vectors, it will just not do the job on hardware like this.
+注意: 在一些硬件上，引脚变化中断并没有被中断向量所声明，而 PciManager 运行需要中断向量，在这样的硬件上它也不会正常工作。
 
 
-# Example code #
+# 示例代码 #
 
 ```
 #include <PciManager.h>
